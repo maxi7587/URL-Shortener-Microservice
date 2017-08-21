@@ -21,17 +21,21 @@ app.get("/", function (request, response) {
 
 app.get("/:data", function (request, response) {
   var data = request.params.data;
-  var id = ObjectId(data);
-  var db = mongoClient.connect(mongoURL, function (err, db) {
-    var collection = db.collection('urls');
-    var shortURL = 
-    collection.findOne({_id: id}, {_id: 0, short_url: 0},function (err, document) {
-      var URL = document.original_url;
-      response.writeHead(301,{Location: URL});
-      response.end();
-      db.close();
+  if (data.length == 24){
+    var id = ObjectId(data);
+    var db = mongoClient.connect(mongoURL, function (err, db) {
+      var collection = db.collection('urls');
+      var shortURL = 
+      collection.findOne({_id: id}, {_id: 0, short_url: 0},function (err, document) {
+        var URL = document.original_url;
+        response.writeHead(301,{Location: URL});
+        response.end();
+        db.close();
+      });
     });
-  });
+  } else {
+    response.send('Error: Wrong URL Are tou sure it´s OK?');
+  }
 });
 
 app.get("/new/http(s)?://:data", function (request, response) {
@@ -57,4 +61,3 @@ app.get("/new/:data", function (request, response) {
 var listener = app.listen(process.env.PORT, function () {
   console.log('App is listening on port ' + listener.address().port);
 });
-  
