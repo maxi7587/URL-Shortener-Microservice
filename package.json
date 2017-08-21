@@ -1,11 +1,7 @@
 {
-  "//1": "App description and dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "Updating this file will download and update packages",
-
-  "name": "my-glitch-app",
+  "name": "URL Shortener Microservice",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Simple URL Shortener",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
