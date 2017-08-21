@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <meta name="description" content="A cool Shortener Microservice">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        URL Shortener Microservice
+      </h1>
+    </header>
+
+    <main>
+      <h2>Welcome to this simple and easy-to-use URL Shortener microservice!</h2>
+      <h2>Here´s a quick guide</h2>
+      <h3>To shorten a new URL use the "/new" path before the URL:</h3>
+      <p>https://url-shortener-app.glitch.me<b>/new/</b>https://www.google.com</p>
+      <h3>You'll get a response like:</h3>
+      <p>{"original_url":"https://www.google.com","short_url":"https://url-shortener-app.glitch.me/599a537c8dc8d02e9734007d"}</p>
+      <h3>You can use the "short_url" as you  like, it will redirect automatically to the "original_url". Test it in your browser.</h3>
+      <h2>Enjoy!!!</h2>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
