@@ -19,6 +19,10 @@
   "engines": {
     "node": "8.x"
   },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/maxi7587/URL-Shortener-Microservice"
+  },
   "license": "Maximiliano Cruz",
   "keywords": [
     "node",
