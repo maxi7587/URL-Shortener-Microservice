@@ -49,6 +49,10 @@ app.get("/new/http(s)?://:data", function (request, response) {
   });
 });
 
+app.get("/new/:data", function (request, response) {
+  response.send('Error: INVALID URL. Plase insert a valid URL. Use the right format and don´t forget to start with "http://" or "https://"')
+});
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
