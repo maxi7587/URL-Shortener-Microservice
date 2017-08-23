@@ -25,7 +25,6 @@ app.get("/:data", function (request, response) {
     var id = ObjectId(data);
     var db = mongoClient.connect(mongoURL, function (err, db) {
       var collection = db.collection('urls');
-      var shortURL = 
       collection.findOne({_id: id}, {_id: 0, short_url: 0},function (err, document) {
         var URL = document.original_url;
         response.writeHead(301,{Location: URL});
