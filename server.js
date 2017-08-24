@@ -7,7 +7,7 @@ var app = express();
 var mongodb = require('mongodb');
 var mongoClient = mongodb.MongoClient();
 var ObjectId = mongodb.ObjectId;
-var mongoURL = 'mongodb://maxi7587:maxi7587mlab@ds149433.mlab.com:49433/urlshortenerdb';
+var mongoURL = 'mongodb://maxi7587:urlshortenerdb@ds149433.mlab.com:49433/urlshortenerdb';
 var http = require('http');
 var url = require('url');
 
